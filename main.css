@@ -1,3 +1,72 @@
-.footer__214dc{
+/* Force "Today at" timestamp */
+@import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/UserActivityRedesign/import.css");
+span[class*="timestampInline_"]>[aria-label^="Today at"]::before {
+  content: "Today at ";
+
+/* Hide Nitro gift button */
+button[aria-label="Send a gift"],
+button[aria-label="Enviar un regalo"] {
     display: none;
+}
+
+/* Hide Apps button */
+button[aria-label="Apps"],
+button[aria-label="Aplicaciones"] {
+    display: none;
+}
+button[aria-label="Discover"] {
+  display: none;
+}
+/* Aligned Chat Box and Typing indicator */
+
+/* Hide Activity Feed / Active Now */
+[class^="activityPanel"],
+[class^="container"] [class^="section-"] [class^="header-"]:has(> [data-text="Active Now"]),
+[class^="container"] [class^="section-"]:has([data-text="Active Now"]) {
+    display: none !important;
+}
+
+/* Hide sticker picker button */
+button[aria-label="Open sticker picker"],
+button[aria-label="Abrir el selector de stickers"],
+button[aria-label="Abrir selector de stickers"] {
+    display: none;
+}
+/* Hide annoying sticker popup window that appears when you type */
+.channelTextArea-1FufC0 > .container-1ZA19X {
+    display: none;
+}
+  
+.visual-refresh section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width) + var(--space-xs));
+  width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
+  box-sizing: content-box};
+
+.actionButtons_e131a9 button {
+    padding: 0;
+  }
+nav.guilds_c48ade {
+  margin-bottom: 0 !important;
+}
+.sidebar_c48ade:after {
+  display: none;
+}
+.backForwardButtons__63abb { 
+  display: none;
+}
+
+[class*='membersGroup']:has([role=button]),w
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
+.visual-refresh section[aria-label="User status and settings"] {
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);;
+    left: var(--custom-guild-list-width);
+    bottom: 0px;
+    border-radius: 0px;
+    border: none;
+}
+
+.visual-refresh nav:has([data-list-id="guildsnav"]) {
+  margin-bottom: unset;
 }
